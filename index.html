@@ -30,6 +30,19 @@
             letter-spacing: 3px;
         }
 
+        /* --- Animation Styles --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), 
+                        transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* --- Navigation --- */
         nav {
             position: fixed;
@@ -124,7 +137,7 @@
         <a href="#footer" class="btn-gold" style="padding: 0.5rem 1.2rem; font-size: 0.7rem;">Book Now</a>
     </nav>
 
-    <section class="hero" id="hero">
+    <section class="hero reveal" id="hero">
         <p style="letter-spacing: 8px; font-weight: 200; margin-bottom: 1rem;">EST. 2026</p>
         <h1>LUMIÈRE</h1>
         <p style="letter-spacing: 4px; font-weight: 200; max-width: 600px;">Where light meets flavor in a symphony of modern gastronomy.</p>
@@ -132,10 +145,10 @@
 
     <section id="about">
         <div class="about-content">
-            <div class="about-image-wrapper">
+            <div class="about-image-wrapper reveal">
                 <img src="https://ansainteriors.com/wp-content/uploads/2021/01/restaurant-interior-design-in-ayodhya.jpg" alt="Restaurant interior">
             </div>
-            <div class="about-text">
+            <div class="about-text reveal">
                 <h2>The Philosophy</h2>
                 <p>Lumière is born from the belief that dining is the ultimate sensory art form. We don't just serve food; we curate moments of light, texture, and taste.</p>
                 <p>Our Executive Chef Julian Marc combines classical French discipline with the avant-garde spirit of Tokyo’s nightlife, resulting in a menu that is as visually stunning as it is delicious.</p>
@@ -145,9 +158,9 @@
     </section>
 
     <section id="menu">
-        <h2 class="section-title">The Seasonal Selection</h2>
+        <h2 class="section-title reveal">The Seasonal Selection</h2>
         <div class="menu-grid">
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Hamachi Crudo">
                 </div>
@@ -157,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Dry-Aged Ribeye">
                 </div>
@@ -167,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Cacao Sphere">
                 </div>
@@ -177,7 +190,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80" alt="Truffle Risotto">
                 </div>
@@ -187,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Pan-Seared Scallops">
                 </div>
@@ -197,7 +210,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1522184216316-3c25379f9760?auto=format&fit=crop&w=800&q=80" alt="Heritage Carrots">
                 </div>
@@ -207,7 +220,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Mushroom Bisque">
                 </div>
@@ -217,7 +230,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://labellavitajlf.com/wp-content/uploads/2018/04/resized_20180415_210001_3987.jpeg?w=2000&h=1500&crop=1" alt="Glazed Octopus">
                 </div>
@@ -227,7 +240,7 @@
                 </div>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card reveal">
                 <div class="menu-img">
                     <img src="https://www.sylvaindepuichaffray.fr/wp-content/uploads/2022/09/millefeuille-the-vert-matcha-marron-couv.jpg" alt="Matcha Mille-Feuille">
                 </div>
@@ -240,24 +253,24 @@
     </section>
 
     <section id="team" class="team-section">
-        <h2 class="section-title">The Culinary Team</h2>
+        <h2 class="section-title reveal">The Culinary Team</h2>
         <div class="team-grid">
-            <div class="team-member">
+            <div class="team-member reveal">
                 <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=600&q=80" class="member-img" alt="Executive Chef">
                 <h3 class="member-name">Julian Marc</h3>
                 <p class="member-role">Executive Chef</p>
             </div>
-            <div class="team-member">
+            <div class="team-member reveal">
                 <img src="https://media.istockphoto.com/id/1298088270/photo/young-beautiful-smiling-woman-chef-with-arms-crossed-at-kitchen.jpg?s=612x612&w=0&k=20&c=ZtYaFLtiRkuA6mQ8HK05xjZNvpb4ev2BS9g2Uc6mdww=" class="member-img" alt="Sous Chef">
                 <h3 class="member-name">Elena Rossi</h3>
                 <p class="member-role">Sous Chef</p>
             </div>
-            <div class="team-member">
+            <div class="team-member reveal">
                 <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" class="member-img" alt="Pastry Chef">
                 <h3 class="member-name">Sato Hiro</h3>
                 <p class="member-role">Pastry Chef</p>
             </div>
-            <div class="team-member">
+            <div class="team-member reveal">
                 <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=600&q=80" class="member-img" alt="Sommelier">
                 <h3 class="member-name">Claire Dupont</h3>
                 <p class="member-role">Head Sommelier</p>
@@ -265,7 +278,7 @@
         </div>
     </section>
 
-    <footer id="footer">
+    <footer id="footer" class="reveal">
         <div class="footer-logo">LUMIÈRE</div>
         <p style="font-weight: 200; margin-bottom: 2rem; letter-spacing: 2px;">122 High Street, Kensington, London<br>+44 20 7946 0123</p>
         <div class="socials">
@@ -277,12 +290,29 @@
     </footer>
 
     <script>
+        // Existing scroll logic
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) nav.classList.add('scrolled');
             else nav.classList.remove('scrolled');
         });
+
+        // New Appear Animation Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
     </script>
 </body>
-
 </html>
